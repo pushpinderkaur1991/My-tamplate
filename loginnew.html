@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>	LoginForm</title>
+    <link href="boot/css/bootstrap.min.css"  type="text/css" rel="stylesheet">
+	<link href="boot/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+	<link href="boot/css/loginnew.css"  type="text/css" rel="stylesheet">
+	
+</head>
+<body class="bg">
+	
+	<div class="container">	
+		<div class="row">
+			<div class="col-sm-3 hidden-xs">
+			</div>
+			   
+				<div class="col-md-5 pull-right" id="form">
+					<img class="text-centre" src="boot/img/login.jpg" height="100" width="100">
+					<p id="p" style="margin-left:80px;">Admin Login </p>
+					
+					
+					<form>
+						
+						<div class="col-md-12">
+							<i class="fa fa-envelope text-primary"></i>
+							<input type="text" name="email" placeholder="Email">
+						</div>
+						
+						<hr>
+							
+							<div class="col-md-12">
+								<i class="fa fa-lock text-primary"></i>
+								<input type="password" name="password" placeholder="Password">
+							</div>
+							<hr>
+							
+							<div class="col-md-12" style="color:white;margin-top:30px;">
+								<input style="width:20px;" type="checkbox" value="remember-me" > Remember me
+							</div>
+							
+								<div class="col-md-12">
+									<button>Submit</button>
+								</div>	
+								<br>
+								<p id="pid">Login With Your Social Profile</p>
+									<div class="social-icons">
+										<ul>
+											<li class="twitter"><a  target="_blank" href="https://twitter.com/easyleadz" class="fa fa-twitter" id="fa"></a></li>
+											<li class="facebook"><a  target="_blank" href="https://www.facebook.com/Easyleadz/"  class="fa fa-facebook" id="fa"></a></li>
+											<li><a  target="_blank" href="#" class="fa fa-google" id="fa"></a></li>
+											<li><a  target="_blank" href="https://www.linkedin.com/company-beta/13333680" class="fa fa-linkedin" id="fa"></a></li>
+										</ul>
+									</div>
+					</form>	
+					
+				</div>	
+		</div>	
+	</div>
+	
+<script src="boot/js/jquery.min.js"></script>
+<script src="boot/js/bootstrap.min.js"></script>
+<script src="boot/js/jquery.bxslider.min.js"></script>
+<script>
+$(function(){ 
+ window.setInterval(function(){
+  
+   $('#pid').toggleClass('blink');
+ }, 500);
+});
+</script>
+
+</body>
+</html>

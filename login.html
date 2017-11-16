@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>	BOOTSTRAP</title>
+    <link href="boot/css/bootstrap.min.css"  type="text/css" rel="stylesheet">
+	<link href="boot/css/jquery.bxslider.min.css" type="text/css" rel="stylesheet">
+	
+	<link href="boot/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+	<link href="boot/css/bs1.css"  type="text/css" rel="stylesheet">
+	
+</head>
+
+<body class="bglogin">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-6 col-md-4">
+				<img alt="logo" src="boot/img/logo.png" width="128" height="80">
+			</div>
+		</div>	
+        <div class="card card-container">
+			
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+				<img id="profile-img" class="profile-img-card" src="boot/img/login-img.png"/>
+					<p id="profile-name" class="profile-name-card"></p>
+						
+						<form class="form-signin">
+							<span id="reauth-email" class="reauth-email"></span>
+								<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+								<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+							<div id="remember" class="checkbox">
+								<label class="white-text">
+									<input  type="checkbox" value="remember-me"> Remember me
+								</label>
+							</div>
+								<button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+									</form>
+									<a href="#" class="forgot-password">
+										Forgot the password?
+									</a>
+        </div>
+    </div>
+
+	
+<script src="boot/js/jquery.min.js"></script>
+<script src="boot/js/bootstrap.min.js"></script>
+<script src="boot/js/jquery.bxslider.min.js"></script>
+
+<script>
+	$( document ).ready(function() {
+	loadProfile();
+});
+function getLocalProfile(callback){
+    var profileImgSrc      = localStorage.getItem("PROFILE_IMG_SRC");
+    var profileName        = localStorage.getItem("PROFILE_NAME");
+    var profileReAuthEmail = localStorage.getItem("PROFILE_REAUTH_EMAIL");
+
+    if(profileName !== null
+            && profileReAuthEmail !== null
+            && profileImgSrc !== null) {
+        callback(profileImgSrc, profileName, profileReAuthEmail);
+    }
+}
+
+function loadProfile() {
+    if(!supportsHTML5Storage()) { return false; }
+	 getLocalProfile(function(profileImgSrc, profileName, profileReAuthEmail) {
+        //changes in the UI
+        $("#profile-img").attr("src",profileImgSrc);
+        $("#profile-name").html(profileName);
+        $("#reauth-email").html(profileReAuthEmail);
+        $("#inputEmail").hide();
+        $("#remember").hide();
+    });
+}
+
+function supportsHTML5Storage() {
+    try {
+        return 'localStorage' in window && window['localStorage'] !== null;
+    } catch (e) {
+        return false;
+    }
+}
+
+function testLocalStorageData() {
+    if(!supportsHTML5Storage()) { return false; }
+    localStorage.setItem("PROFILE_IMG_SRC", "//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" );
+    localStorage.setItem("PROFILE_NAME", "César Izquierdo Tello");
+    localStorage.setItem("PROFILE_REAUTH_EMAIL", "oneaccount@gmail.com");
+</script>	
+	
+
+</body>
+</html>
