@@ -1,0 +1,108 @@
+body
+{
+	background-color:#CFCFCF;
+}
+.nav-link
+{
+	text-decoration:none;
+	
+}
+.nav-link{
+	display:inline-block;
+	color:black;
+}
+#nav-tag
+{
+background-color:#104E8B;
+}
+
+
+.bg-light
+{
+	background-color:none;
+}
+
+.navbar{
+	
+	
+	z-index:7;
+	font-style:normal;
+}
+.nav-item {padding:8px;
+padding-top:20px;
+
+font-size:12px;
+}
+.nav-item a{
+	color:white;
+}
+.nav-itemm{
+	font-size:25px;
+	color:black;
+	padding:8px;
+	padding-top:10px;
+}
+.nav-itemm:hover
+{
+	color:black;
+	}
+
+.nav{
+	margin-left:50px;
+}
+
+
+@media (min-width: 800px) {
+  .navbar-nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .navbar-nav .nav-item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
+
+  
+  
+.title
+{
+	 height:50px;
+	 color:#6495ED;
+	 background-color:white;
+	 padding:5px 20px 20px 20px;
+	 font-weight: bold;
+	 font-size:20px;
+}	
+
+.compose-div
+{
+	height:130px;
+	padding-left:20px;
+	padding-top:5px;
+	margin-bottom:30px;
+	margin-top:10px;
+	background-color:white;
+}
+
+	
+#text{
+	text-decoration:none;
+	font-weight: bold;
+}	
+#text:hover {color:green;font-weight: bold;}
+#text1{font-size:20px;text-decoration:none;font-weight: bold;}
+#text1:hover {color:green;font-weight: bold;}
+#sign-btn{font-size:15px;font-weight: bold;width:90px;
+	height:40px;}
+#sign-btn:hover
+{
+	color:black;
+	box-shadow: 4px 4px 5px black;
+	font-weight: bold;
+	
+}
